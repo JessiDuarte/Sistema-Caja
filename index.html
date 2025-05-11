@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Caja - Almacén</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Sistema de Caja</h1>
+
+    <div class="product-section">
+      <label for="producto">Selecciona Producto:</label>
+      <select id="producto">
+        <option value="pollo">Pollo</option>
+        <option value="verduras">Verduras</option>
+        <option value="almacen">Productos de Almacén</option>
+      </select>
+    </div>
+
+    <div class="quantity-section">
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" value="1" min="1">
+    </div>
+
+    <div class="price-section">
+      <label for="precio">Precio por unidad (en $):</label>
+      <input type="number" id="precio" value="0" min="0" step="0.01">
+    </div>
+
+    <div class="total-section">
+      <h3>Total de Venta: $<span id="total">0.00</span></h3>
+    </div>
+
+    <button id="registrarVenta">Registrar Venta</button>
+
+    <h2>Ventas del Día</h2>
+    <ul id="ventasList"></ul>
+
+    <div class="total-caja">
+      <h3>Total Efectivo: $<span id="totalEfectivo">0.00</span></h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
